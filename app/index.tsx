@@ -36,7 +36,7 @@ const ProgressBar = ({ xp, max, renk }: { xp: number; max: number; renk: string 
   );
 };
 
-const ProfileCard = ({ xp, isMusait, onIseAl, secilenAlan }: { xp: number; isMusait: boolean; onIseAl: () => void; secilenAlan: string; }) => {
+const ProfileCard = ({ xp, isMusait, onIseAl, secilenAlan, onAlanDegistir }: { xp: number; isMusait: boolean; onIseAl: () => void; secilenAlan: string; onAlanDegistir: () => void; }) => {
   const seviye = getSeviyeBilgisi(xp);
 
   const basariyiPaylas = async () => {
@@ -56,7 +56,9 @@ const ProfileCard = ({ xp, isMusait, onIseAl, secilenAlan }: { xp: number; isMus
       <View style={styles.cardHeaderRow}>
         <View>
           <Text style={styles.name}>Kullanıcı</Text>
-          <Text style={styles.role}>{secilenAlan}</Text>
+          <TouchableOpacity onPress={onAlanDegistir} activeOpacity={0.7}>
+            <Text style={[styles.role, { textDecorationLine: 'underline' }]}>{secilenAlan} ✏️</Text>
+          </TouchableOpacity>
         </View>
         <View style={[styles.xpBadge, { borderColor: seviye.renk }]}>
           <Text style={[styles.xpValue, { color: seviye.renk }]}>{xp}</Text>
@@ -268,7 +270,7 @@ export default function IndexScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
       <LogoHeader />
-      <ProfileCard xp={xp} isMusait={isMusait} onIseAl={handleIseAl} secilenAlan={secilenAlan} />
+      <ProfileCard xp={xp} isMusait={isMusait} onIseAl={handleIseAl} secilenAlan={secilenAlan} onAlanDegistir={() => setSecilenAlan(null)} />
       <BugHunter onXpChange={(val) => setXp((prev) => prev + val)} secilenAlan={secilenAlan} />
     </ScrollView>
   );
