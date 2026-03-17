@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# 🚀 KodKart - Profesyonel Yazılımcı Kimliği
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+KodKart, yazılım geliştiricilerin teknik bilgilerini ölçen, yeteneklerini oyunlaştırma (gamification) dinamikleriyle test eden ve onlara profesyonel bir dijital kimlik sunan interaktif bir mobil uygulamadır. 
 
-## Get started
+Yazılım Gerçekleştirimi ve Testi dersi kapsamında geliştirilmiştir.
 
-1. Install dependencies
+## 📌 Teslimat Materyalleri (Hızlı Erişim)
 
-   ```bash
-   npm install
-   ```
+Hızlı değerlendirme için projenin temel çıktılarına aşağıdaki bağlantılardan ulaşabilirsiniz:
 
-2. Start the app
+* 🎥 **Uygulama Tanıtım Videosu:** [YouTube'da İzle](https://youtube.com/shorts/v0zt0fFF15o?feature=share)
+* 📦 **Kurulabilir APK Dosyası:** [Google Drive Üzerinden İndir](https://drive.google.com/file/d/1YEGXQzvN_y9LEaYzynBgmrBj7HoX5SeD/view?usp=sharing)
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🌟 Öne Çıkan Özellikler
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* **🎭 Dinamik Alan Seçimi:** Kullanıcılar uzmanlık alanlarını (Frontend, Backend, Ağ Mühendisi vb.) seçer ve diledikleri zaman profillerinden bu alanı değiştirebilirler.
+* **🧠 Teorik Sınav Modu:** Seçilen uzmanlık alanına özel, anlık geri bildirim veren bilgi yarışması konsepti.
+* **💻 Kod Okuma Modu:** Geliştiricilerin aşina olduğu "Dark Mode / VS Code" temalı, gerçekçi kod snippet'ları üzerinden hata bulma ve analiz testleri.
+* **🎮 Oyunlaştırma (Gamification):** Doğru cevaplarla dolan dinamik XP barı ve belirli seviyelerde kazanılan başarı rozetleri.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Kullanılan Teknolojiler
 
-## Get a fresh project
+* **Framework:** React Native & Expo
+* **Navigasyon:** Expo Router (Dosya tabanlı navigasyon)
+* **Dil:** TypeScript / JavaScript
+* **Derleme:** Gradle (Lokal Android Build - JDK 17) & EAS
+* **UI/UX:** React Native StyleSheet, Animasyonlar ve Dinamik Bileşenler
 
-When you're ready, run:
+## 📱 Kurulum ve Çalıştırma (Geliştiriciler İçin)
 
-```bash
-npm run reset-project
-```
+Projeyi kendi bilgisayarınızda yerel (local) olarak çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+\`\`\`bash
+# Repoyu klonlayın
+git clone https://github.com/Huseyinyagmur/KodKart.git
 
-## Learn more
+# Proje dizinine girin
+cd KodKart
 
-To learn more about developing your project with Expo, look at the following resources:
+# Bağımlılıkları yükleyin
+npm install
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# Geliştirme sunucusunu başlatın
+npx expo start
+\`\`\`
+*(Not: `npx expo start` komutu ile uygulamayı Expo Go üzerinden cihazınızda test edebilirsiniz.)*
