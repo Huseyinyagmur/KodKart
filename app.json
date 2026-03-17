@@ -4,7 +4,7 @@
     "slug": "KodKart",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./pp.jpg",
+    "icon": "./assets/images/splash.png",
     "scheme": "kodkart",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

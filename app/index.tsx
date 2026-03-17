@@ -13,7 +13,7 @@ const getSeviyeBilgisi = (xp: number) => {
 const LogoHeader = () => (
   <View style={styles.headerContainer}>
     <View style={styles.logoCircle}>
-      <Image source={require("../assets/splash.png")} style={styles.logoImage} />
+      <Image source={require("../assets/images/splash.png")} style={styles.logoImage} />
     </View>
     <Text style={styles.headerTitle}>KodKart</Text>
     <Text style={styles.headerSubtitle}>Profesyonel Yazılımcı Kimliği</Text>
