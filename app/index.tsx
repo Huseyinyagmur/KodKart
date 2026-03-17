@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { Image, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { kodOkumaHavuzu, KodOkumaTipi, soruHavuzu, SoruTipi } from "./sorular";
 
-// --- Helpers ---
 const getSeviyeBilgisi = (xp: number) => {
   if (xp >= 250) return { adi: "Senior", ikon: "🥇", renk: "#FFD700", bg: "#422006", max: 500 };
   if (xp >= 100) return { adi: "Mid-Level", ikon: "🥈", renk: "#C0C0C0", bg: "#1e293b", max: 250 };
   return { adi: "Junior", ikon: "🥉", renk: "#38bdf8", bg: "#0f172a", max: 100 };
 };
 
-// --- Sub-Components ---
+
 
 const LogoHeader = () => (
   <View style={styles.headerContainer}>
@@ -114,7 +113,7 @@ const BugHunter = ({ onXpChange, secilenAlan }: { onXpChange: (xp: number) => vo
     ? (soruHavuzu[secilenAlan] || soruHavuzu["Frontend Geliştirici"])
     : (kodOkumaHavuzu[secilenAlan] || kodOkumaHavuzu["Frontend Geliştirici"]);
 
-  // Kategoriler arası geçişlerde mevcutBug indeksinin sınırları aşmasını (undefined) engellemek için reset atıyoruz.
+
   useEffect(() => {
     setMevcutBug(0);
   }, [secilenAlan, oyunModu]);
@@ -124,7 +123,7 @@ const BugHunter = ({ onXpChange, secilenAlan }: { onXpChange: (xp: number) => vo
 
     const aktifBug = aktifHavuz[mevcutBug];
     const dogruMu = secilenMetin === aktifBug.dogruCevap;
-    const kazanilanXp = dogruMu ? 35 : -15; // Kod okuma bir tık daha zor, ödülü/cezası yüksek tuttuk.
+    const kazanilanXp = dogruMu ? 35 : -15; 
 
     onXpChange(kazanilanXp);
 
@@ -209,7 +208,6 @@ const BugHunter = ({ onXpChange, secilenAlan }: { onXpChange: (xp: number) => vo
   );
 };
 
-// --- Onboarding / Welcome Screen ---
 const OnboardingScreen = ({ onSelectAlan }: { onSelectAlan: (alan: string) => void }) => {
   const alanlar = [
     { baslik: "Mobil Geliştirici", detay: "React Native, Swift, Kotlin", ikon: "📱" },
